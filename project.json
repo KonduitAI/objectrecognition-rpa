@@ -1,0 +1,28 @@
+{
+  "name": "Object Recognition IOT",
+  "description": "Object Recognition using uipath and AI",
+  "main": "Main.xaml",
+  "dependencies": {
+    "RestSharp": "[106.6.9]",
+    "UiPath.System.Activities": "[18.4.2]",
+    "UiPath.UIAutomation.Activities": "[18.4.4]",
+    "UiPath.WebAPI.Activities": "[1.4.0]",
+    "ImagePreview": "[1.2.0]",
+    "BalaReva.Externals.Activities": "[4.0.3]"
+  },
+  "schemaVersion": "3.2",
+  "studioVersion": "18.4.4.0",
+  "projectVersion": "1.0.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ]
+  },
+  "projectType": "Workflow",
+  "libraryOptions": {
+    "includeOriginalXaml": false,
+    "privateWorkflows": []
+  }
+}
