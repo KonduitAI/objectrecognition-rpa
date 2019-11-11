@@ -39,7 +39,7 @@ If there are any exceptions, please file a github issue.
 To test it, submit a test image by passing the path of the image into the popup window and click "OK".  
 This is a workflow that contains an http request that handles calling the server via some configured parameters.
 
-![Enter Path](img/enterpath.png "Enter Path")
+![enter_path](img/enterpath.png "enter_path")
 
 
 After this, a series of alerts will display indicating the output from the model and will also display an
