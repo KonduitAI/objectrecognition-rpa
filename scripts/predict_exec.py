@@ -1,13 +1,17 @@
 # Note the sys declaration here is to sync with the server's python run time.
 import sys
-
-# Run the pythons cript
-from keras.applications.resnet50 import ResNet50
-# from keras.preprocessing import image
-from keras.applications.resnet50 import preprocess_input, decode_predictions
-import numpy as np
-import tensorflow as tf
-import keras
+import logging
+import warnings
+logging.disable(logging.WARNING)
+with warnings.catch_warnings():  
+    warnings.filterwarnings("ignore",category=FutureWarning)
+    import tensorflow as tf
+    import keras
+    import numpy as np
+    # Run the pythons cript
+    from keras.applications.resnet50 import ResNet50
+    # from keras.preprocessing import image
+    from keras.applications.resnet50 import preprocess_input, decode_predictions
 import cv2
 
 # needed when dealing with multi threading
