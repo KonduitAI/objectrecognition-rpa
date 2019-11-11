@@ -1,0 +1,58 @@
+{
+  "pipelineSteps" : [ {
+    "@type" : "PythonPipelineStep",
+    "affectedInputNames" : [ ],
+    "affectedOutputNames" : [ ],
+    "inputColumnNames" : {
+      "default" : ["img_path" ]
+    },
+    "inputNames" : [ "default" ],
+    "inputSchemas" : {
+      "default" : [ "String" ]
+    },
+    "outputColumnNames" : {
+      "default" : [ "label" , "proba" ]
+    },
+    "outputNames" : [ ],
+    "outputSchemas" : {
+      "default" : [ "String" , "String" ]
+    },
+    "pythonConfigs" : {
+      "default" : {
+        "@type" : "PythonConfig",
+        "extraInputs" : { },
+        "modelConfigType" : null,
+        "pythonCode" : null,
+        "pythonCodePath" : "REPLACESCRIPT\\predict_exec.py",
+        "pythonInputs" : {
+          "img_path" : "STR"
+        },
+        "pythonOutputs" : {
+          "label" : "STR",
+          "proba" : "STR"
+        },
+        "pythonPath" : "REPLACE\\conda\\python37.zip;REPLACE\\conda\\DLLs;REPLACE\\conda\\lib;REPLACE\\conda;;REPLACE\\conda\\lib\\site-packages;REPLACE\\conda\\lib\\site-packages\\win32;REPLACE\\conda\\lib\\site-packages\\win32\\lib;REPLACE\\conda\\lib\\site-packages\\Pythonwin;REPLACE\\conda\\lib\\site-packages\\IPython\\extensions;REPLACE\\scripts",
+        "returnAllInputs" : false,
+        "tensorDataTypesConfig" : null
+      }
+    }
+  } ],
+  "servingConfig" : {
+    "httpPort" : 1103,
+    "inputDataType" : "IMAGE",
+    "listenHost" : "localhost",
+    "logTimings" : false,
+    "outputDataType" : "JSON",
+    "parallelInferenceConfig" : {
+      "batchLimit" : 32,
+      "inferenceMode" : "BATCHED",
+      "maxTrainEpochs" : 1,
+      "queueLimit" : 64,
+      "vertxConfigJson" : null,
+      "workers" : 1
+    },
+    "predictionType" : "RAW",
+    "pubSubConfig" : null,
+    "uploadsDirectory" : "file-uploads/"
+  }
+}

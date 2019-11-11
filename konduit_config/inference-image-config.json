@@ -1,0 +1,58 @@
+{
+  "pipelineSteps" : [ {
+    "@type" : "PythonPipelineStep",
+    "affectedInputNames" : [ ],
+    "affectedOutputNames" : [ ],
+    "inputColumnNames" : {
+      "default" : ["img_path" ]
+    },
+    "inputNames" : [ "default" ],
+    "inputSchemas" : {
+      "default" : [ "String" ]
+    },
+    "outputColumnNames" : {
+      "default" : [ "label" , "proba" ]
+    },
+    "outputNames" : [ ],
+    "outputSchemas" : {
+      "default" : [ "String" , "String" ]
+    },
+    "pythonConfigs" : {
+      "default" : {
+        "@type" : "PythonConfig",
+        "extraInputs" : { },
+        "modelConfigType" : null,
+        "pythonCode" : null,
+        "pythonCodePath" : "C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\scripts\\predict_exec.py",
+        "pythonInputs" : {
+          "img_path" : "STR"
+        },
+        "pythonOutputs" : {
+          "label" : "STR",
+          "proba" : "STR"
+        },
+        "pythonPath" : "C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\python37.zip;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\DLLs;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda;;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib\\site-packages;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib\\site-packages\\win32;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib\\site-packages\\win32\\lib;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib\\site-packages\\Pythonwin;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\conda\\lib\\site-packages\\IPython\\extensions;C:\\\\Users\\\\TUF\\\\Desktop\\\\objectrecognition-rpa-master\\\\distro\\scripts",
+        "returnAllInputs" : false,
+        "tensorDataTypesConfig" : null
+      }
+    }
+  } ],
+  "servingConfig" : {
+    "httpPort" : 1103,
+    "inputDataType" : "IMAGE",
+    "listenHost" : "localhost",
+    "logTimings" : false,
+    "outputDataType" : "JSON",
+    "parallelInferenceConfig" : {
+      "batchLimit" : 32,
+      "inferenceMode" : "BATCHED",
+      "maxTrainEpochs" : 1,
+      "queueLimit" : 64,
+      "vertxConfigJson" : null,
+      "workers" : 1
+    },
+    "predictionType" : "RAW",
+    "pubSubConfig" : null,
+    "uploadsDirectory" : "file-uploads/"
+  }
+}

@@ -3,26 +3,36 @@
   "description": "Object Recognition using uipath and AI",
   "main": "Main.xaml",
   "dependencies": {
+    "BalaReva.Externals.Activities": "[4.0.3]",
+    "ImagePreview": "[1.2.0]",
     "RestSharp": "[106.6.9]",
     "UiPath.System.Activities": "[18.4.2]",
     "UiPath.UIAutomation.Activities": "[18.4.4]",
-    "UiPath.WebAPI.Activities": "[1.4.0]",
-    "ImagePreview": "[1.2.0]",
-    "BalaReva.Externals.Activities": "[4.0.3]"
+    "UiPath.WebAPI.Activities": "[1.4.0]"
   },
-  "schemaVersion": "3.2",
-  "studioVersion": "18.4.4.0",
+  "webServices": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "19.10.0.484",
   "projectVersion": "1.0.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "isPausable": true,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
     "excludedLoggedData": [
       "Private:*",
       "*password*"
-    ]
+    ],
+    "executionType": "Workflow"
   },
-  "projectType": "Workflow",
-  "libraryOptions": {
-    "includeOriginalXaml": false,
-    "privateWorkflows": []
-  }
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "fileInfos": []
+  },
+  "expressionLanguage": "VisualBasic"
 }
