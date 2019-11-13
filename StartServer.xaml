@@ -48,30 +48,13 @@
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>UiPath.Java.Activities</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Start Server" sap:VirtualizedContainerService.HintSize="560.8,1794.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="distroExists" />
-      <Variable x:TypeArguments="x:String" Name="javaFile">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="distroDir + &quot;\jdk\bin\java.exe -d64 -cp ai.skymind.pipelines.configprovider.PipelineServerMain &quot; + distroDir + &quot;\konduit-serving.jar&quot;">
-            <mva:VisualBasicValue.Result>
-              <OutArgument x:TypeArguments="x:String" />
-            </mva:VisualBasicValue.Result>
-          </mva:VisualBasicValue>
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="args">
-        <Variable.Default>
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot; --configPath &quot;  + Directory.GetCurrentDirectory() + &quot;konduit_config\inference-image-config.json&quot;">
-            <mva:VisualBasicValue.Result>
-              <OutArgument x:TypeArguments="x:String" />
-            </mva:VisualBasicValue.Result>
-          </mva:VisualBasicValue>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="[distroDir + &quot;\jdk\bin\java.exe -d64 -cp ai.skymind.pipelines.configprovider.PipelineServerMain &quot; + distroDir + &quot;\konduit-serving.jar&quot;]" Name="javaFile" />
+      <Variable x:TypeArguments="x:String" Default="[&quot; --configPath &quot;  + Directory.GetCurrentDirectory() + &quot;konduit_config\inference-image-config.json&quot;]" Name="args" />
       <Variable x:TypeArguments="x:String" Default="[Directory.GetCurrentDirectory()  +  &quot;\distro&quot;]" Name="distroDir" />
       <Variable x:TypeArguments="x:String" Name="condabin" />
       <Variable x:TypeArguments="x:String" Name="condacmd" />
@@ -145,38 +128,20 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Configure_Konduit_Json workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" Timeout="{x:Null}" UnSafe="False" WorkflowFileName="Configure_Konduit_Json.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Configure_Konduit_Json workflow" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="ConfigureKonduitJson.xaml">
         <ui:InvokeWorkflowFile.Arguments>
-          <InArgument x:TypeArguments="x:String" x:Key="Server_config_Path">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Directory.GetCurrentDirectory() + &quot;\konduit_config&quot;">
-              <mva:VisualBasicValue.Result>
-                <OutArgument x:TypeArguments="x:String" />
-              </mva:VisualBasicValue.Result>
-            </mva:VisualBasicValue>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="Python_Script_Path">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Directory.GetCurrentDirectory() + &quot;\scripts&quot;">
-              <mva:VisualBasicValue.Result>
-                <OutArgument x:TypeArguments="x:String" />
-              </mva:VisualBasicValue.Result>
-            </mva:VisualBasicValue>
-          </InArgument>
-          <InArgument x:TypeArguments="x:String" x:Key="DistroPath">
-            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="distroDir">
-              <mva:VisualBasicValue.Result>
-                <OutArgument x:TypeArguments="x:String" />
-              </mva:VisualBasicValue.Result>
-            </mva:VisualBasicValue>
-          </InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Server_config_Path">[Directory.GetCurrentDirectory() + "\konduit_config"]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="Python_Script_Path">[Directory.GetCurrentDirectory() + "\scripts"]</InArgument>
+          <InArgument x:TypeArguments="x:String" x:Key="DistroPath">[distroDir]</InArgument>
         </ui:InvokeWorkflowFile.Arguments>
       </ui:InvokeWorkflowFile>
       <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[args]" DisplayName="Start Process" FileName="[javaFile]" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_5" />
-      <ui:SendHotkey Activate="True" ClickBeforeTyping="False" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DisplayName="Send Hotkey 'java.exe '" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="up" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'java.exe '" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key="up" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
         <ui:SendHotkey.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2f3dc48e12176a9d35955030c09e12ed" Selector="&lt;wnd app='java.exe' cls='ConsoleWindowClass' title='*\distro\jdk\bin*' /&gt;" WaitForReady="INTERACTIVE" />
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
-      <ui:SendHotkey Activate="True" ClickBeforeTyping="False" ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" DisplayName="Send Hotkey 'java.exe '" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="right" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
+      <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'java.exe '" EmptyField="False" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="right" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
         <ui:SendHotkey.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2f3dc48e12176a9d35955030c09e12ed" Selector="&lt;wnd app='java.exe' cls='ConsoleWindowClass' title='*\distro\jdk\bin*' /&gt;" WaitForReady="INTERACTIVE" />
         </ui:SendHotkey.Target>
