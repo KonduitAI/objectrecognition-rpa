@@ -365,7 +365,7 @@
       ]
     },
     "Caliburn.Micro/3.0.1": {
-      "sha512": "34GUogBL8tS1rWCSugKwaOdmZZz162JC0K3HCSPuSlkCZwA1zDTspUp7owXigOjliCSiBzP1ltBFMWpLxs9BtQ==",
+      "sha512": "6RaRnvbHnwm2kx9N+xyI6+qCLDJaAGsV1JgKlQ2QWApYNinpqO1GglwZdCWQ6eWj0var+XjbM8V7NYqB/C1elg==",
       "type": "package",
       "path": "caliburn.micro/3.0.1",
       "files": [
@@ -429,7 +429,7 @@
       ]
     },
     "Caliburn.Micro.Core/3.0.1": {
-      "sha512": "rYCObUe1g/ks4kTEPMFc4yFShYWkL6P5sfUsJOPGSKPXCsnKXL0XaclU3XGWAHBeNTPBgJO9pJBfMBcaq3iyRg==",
+      "sha512": "CZPp0HVaHiW/N6JGsXpyJXnoyVRhFMY+H2uZcD24oNPczLOX1WuWsyVrSdagqUhjZnP1wV42Y6PkIUXEWWgOCg==",
       "type": "package",
       "path": "caliburn.micro.core/3.0.1",
       "files": [
@@ -471,9 +471,10 @@
       ]
     },
     "Extended.Wpf.Toolkit/2.8.0": {
-      "sha512": "YzLQ/sB91g0gRftvlPGOqYJe6TwiPTQoYhO+4ZSsnxaMEQZ5KZIQySTtsTWZ0HJC5+xrgk1Z/if7kjY4cSRPdw==",
+      "sha512": "wKjJl4sDyXTVzgiKTBTw8jT0/3OwpEklQuWGe1Nz2HX0joiBeUzIurY2mnERni+8XHwateRcuks6yk/cuR22fA==",
       "type": "package",
       "path": "extended.wpf.toolkit/2.8.0",
+      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -501,7 +502,7 @@
       ]
     },
     "Humanizer.Core/2.4.2": {
-      "sha512": "A8amPZrfrFU+6BO+t/NLejofWah39XsRuovQqaHdYYtXANM+dexMrc+AbLmuH3qNV4hJv6FArBsBBtZcaODLZg==",
+      "sha512": "1ZKy7LHVYuhmM398hpvyWCcc2Fcx+hqiGYASELDthjWhVrsA6IabYnHRfkQFF6nGG6x4fA1D0StDX/U2Pj+FdQ==",
       "type": "package",
       "path": "humanizer.core/2.4.2",
       "files": [
@@ -526,7 +527,7 @@
       ]
     },
     "Microsoft.Rest.ClientRuntime/2.3.10": {
-      "sha512": "a30J6t7LRkYx974tLaRnJc/dYZ1M7uhc5vdgULxdhL7HJNJydG7e+jyAVD15gK+vFR1i9MH+5Ch9t1zhb/Lp1g==",
+      "sha512": "JO9CzV1hvjtrIzq06gJ5nNv7GV24Xz3Y3O9vx7fCe7ndNA0NmD3fZ9JUgFir2UvJ2/+9vvCo/6RXjyfywvQQIw==",
       "type": "package",
       "path": "microsoft.rest.clientruntime/2.3.10",
       "files": [
@@ -572,7 +573,7 @@
       ]
     },
     "RestSharp/106.6.9": {
-      "sha512": "8RNSrGB8OJqkVnUno0amSL1dsTXGkqVjRvpgwhDR1cy4xhwc/6PWAJFiz6B5cnwmCB9aYMGaHrgKfTt6iMziqw==",
+      "sha512": "/IAQTwlnlQcjlIyvelf+rhQcCRPy/r/0MftpNbff/D7PZVnmVXE4AnHk/F4NJJJEZbI4M+QTglB+xFkAyzr+9A==",
       "type": "package",
       "path": "restsharp/106.6.9",
       "files": [
@@ -817,15 +818,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\agibs\\.nuget\\packages\\": {}
+    "C:\\Users\\TUF\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Object Recognition IOT",
       "projectName": "Object Recognition IOT",
-      "projectPath": "C:\\Users\\agibs\\Documents\\GitHub\\objectrecognition-uipath\\.local",
-      "packagesPath": "C:\\Users\\agibs\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\agibs\\Documents\\GitHub\\objectrecognition-uipath\\.local"
+      "projectPath": "C:\\Users\\TUF\\Desktop\\OR_repo\\.local",
+      "packagesPath": "C:\\Users\\TUF\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\TUF\\Desktop\\OR_repo\\.local"
     },
     "frameworks": {
       "net461": {
